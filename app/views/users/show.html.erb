@@ -1,0 +1,21 @@
+
+
+<h1>Você está logado(a)<br><br></h1>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @user.matricula %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Criar Uffmail', users_path %>
