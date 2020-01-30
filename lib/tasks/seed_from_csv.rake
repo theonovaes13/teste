@@ -9,7 +9,7 @@ namespace :csv_import do
     data = CSV.parse(file, headers: true)
 
     data.each do |line|
-      iduff = line.to_h[:uffmail]
+      iduff = line.to_h["uffmail"]
       Student.create!(line.to_h.except("status","uffmail").merge(iduff: iduff))
     end
     puts("File imported")

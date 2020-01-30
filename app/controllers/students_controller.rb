@@ -15,8 +15,10 @@ class StudentsController < ApplicationController
     end
   end
   def edit
+    redirect_to root_path if current_user.student.iduff.nil? == false
     @nomes = current_user.cria_opcao if current_user.student.iduff.nil?
-    @student = current_user.student
+    @student = Student.find(params[:id])
+
   end
   private
   def student_params

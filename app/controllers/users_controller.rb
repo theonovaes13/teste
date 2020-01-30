@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+
     @users = User.all
   end
 
@@ -27,8 +28,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    redirect_to root_path if Student.por_email(user_params[:email]).blank?
-    byebug
+    redirect_to edit_student_path if Student.por_email(user_params[:email]).blank?
     @user = Student.por_email(user_params[:email]).build_user(user_params)
 
 

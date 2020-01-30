@@ -9,9 +9,9 @@ class User < ApplicationRecord
   belongs_to :student, optional: true
   validates :student_id, uniqueness: true
 
-  scope :acha_nome, -> user do
-    select('students.nome').joins(:student).where(id: self.id)
-  end
+  # scope :acha_nome, -> user do
+  #   select('students.nome').joins(:student).where(id: self.id)
+  # end
 
   def cria_opcao
     nome = self.student.nome.split
