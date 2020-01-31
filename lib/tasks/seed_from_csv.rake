@@ -10,7 +10,7 @@ namespace :csv_import do
 
     data.each do |line|
       iduff = line.to_h["uffmail"]
-      Student.create!(line.to_h.except("status","uffmail").merge(iduff: iduff))
+      Student.create!(line.to_h.except("status","uffmail").merge(iduff: "#{rand(0..100000)}iduff"))
     end
     puts("File imported")
   end
