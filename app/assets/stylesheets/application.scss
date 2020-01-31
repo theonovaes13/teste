@@ -18,6 +18,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+h2{
+  display: inline-block;
+  background-color: white;
+  margin-top: 10%;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 7px;
+}
+
 h1{
   display: inline-block;
   background-color: white;
@@ -25,6 +34,7 @@ h1{
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 7px;
+  animation: shake 8s infinite;
 
 }
 
@@ -35,7 +45,6 @@ a{
   box-shadow: 5px 5px 8px 3px #FF000040;
   padding-right: 5px;
   padding-left: 5px;
-  margin-outside: 10px;
 }
 
 body{
@@ -49,29 +58,94 @@ body{
   top: 90%
 }
 
+.Links{
+  padding: 10px 10px 10px 10px;
+}
+
 
 
 #form-mail{
-  display: inline-block;
+  width: 20%;
+
+  margin: 10px auto;
   background-color: cornflowerblue;
+  margin-bottom: 10px;
 }
 
-#titulo{
-  font-family: cursive;
-  animation-duration: 3s;
-  animation-name: shake;
-  animation-iteration-count: infinite;
-  //&:hover{
-  //
-  //  transform: scale(1.5) rotate(180deg);
-  //}
-  transition: all 0.75s;
-  text-align: center;
+//#titulo{
+//  font-family: cursive;
+//  animation-duration: 3s;
+//  animation-name: shake;
+//  animation-iteration-count: infinite;
+//  //&:hover{
+//  //
+//  //  transform: scale(1.5) rotate(180deg);
+//  //}
+//  transition: all 0.75s;
+//  text-align: center;
+//  background-color: white;
+//  display: inline-block;
+//}
+
+
+#inscricao{
+  display: inline-block;
   background-color: white;
-  margin: 0px 100px;
+  border-radius: 7px;
+  font-size: 30px;
+  margin: 50px;
+
+}
+#gatinho{
+  position: fixed;
+  top: 80px;
+  left: -100px;
+  z-index: -1;
+  //animation-duration: 3s;
+  //animation-name: walk;
+  //animation-iteration-count: infinite;
+  //animation-direction: alternate;
+}
+
+#gatinho2{
+  position: fixed;
+  top: 80px;
+  left: 10px;
+  z-index: -1;
+  animation: walk2 8s infinite;
+  animation-direction: alternate;
 }
 
 
+
+
+
+@keyframes walk {
+  0% {
+    left: -50%;
+  }
+  70%{
+    left: 50%;
+  }
+  80% {
+    left: -90%;
+  }
+  100%{
+    left: -90%;
+
+  }
+}
+
+@keyframes walk2 {
+  0% {
+    transform: rotate(0);
+    left: -50%;
+  }
+  100% {
+    transform: rotate(360deg);
+    left: 100%;
+  }
+}
 
 @keyframes shake {
   40% {
@@ -86,62 +160,3 @@ body{
   55% {
     transform: rotate(0deg);
   }}
-
-#inscricao{
-  display: inline-block;
-  background-color: white;
-  font-size: 30px;
-  margin: 50px;
-
-}
-#gatinho{
-  position: fixed;
-  top: 80px;
-  left: 10px;
-  z-index: -1;
-  animation-duration: 3s;
-  animation-name: walk;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#gatinho2{
-  position: fixed;
-  top: 80px;
-  left: 10px;
-  z-index: -1;
-  animation-duration: 3s;
-  animation-name: walk2;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-
-#h2login{
-  display: block;
-  background-color: white;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 7px;
-}
-
-
-@keyframes walk {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes walk2 {
-  0% {
-    transform: rotate(0);
-    left: -50%;
-  }
-  100% {
-    transform: rotate(360deg);
-    left: 100%;
-  }
-}

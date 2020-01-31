@@ -1,4 +1,4 @@
-<h2 id="titulo">Log in</h2>
+<h2 id="titulo">Login</h2><br><br>
 <img id="gatinho2" src="https://i.pinimg.com/originals/ce/c4/9e/cec49ef2741941ccb25a382cfa463189.png" alt="miau">
 <div id="form-mail">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,4 +25,4 @@
 <% end %>
 </div>
 
-<%= render "devise/shared/links" %>
+<%= link_to( "Registre-se", new_user_registration_path) %>
