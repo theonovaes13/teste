@@ -7,6 +7,19 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def update
+    respond_to do |format|
+      if @student.update(student_params)
+        debugger
+        format.html { redirect_to @student, notice: 'Seu IDUFF foi devidamente gerado' }
+        format.json { render :show, status: :ok, location: @student }
+      else
+        format.html { render :edit }
+        format.json { render json: @student.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @student.destroy
     respond_to do |format|
@@ -15,14 +28,14 @@ class StudentsController < ApplicationController
     end
   end
   def edit
-    redirect_to root_path if current_user.student.iduff.nil? == false
+    redirect_to student_path() unless current_user.student.iduff.nil?
     @nomes = current_user.cria_opcao if current_user.student.iduff.nil?
     @student = Student.find(params[:id])
 
   end
   private
   def student_params
-    params.require(:student).permit(:nome, :matricula, :email)
+    params.require(:student).permit(:nome, :matricula, :email, :iduff)
   end
 
   def set_student

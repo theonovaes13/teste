@@ -3,7 +3,7 @@
 <div class = "Options">
 <%= form_for(@student, local: true ) do |f| %>
   <%= f.label :iduff, @nomes[0] %>
-  <%= f.radio_button(:iduff, "abc", :checked => true) %>
+  <%= f.radio_button(:iduff, @nomes[0], :checked => true) %>
 
   <%= f.label :iduff, @nomes[1] %>
   <%= f.radio_button(:iduff, @nomes[1])  %>

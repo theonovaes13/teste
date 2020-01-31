@@ -1,0 +1,6 @@
+<h1>Informações de <%= @student.nome.split[0] %>:</h1>
+
+<%= @student.nome %>
+<%= @student.iduff %>
+
+<%= link_to("Logout", destroy_user_session_path, method: :delete) %>

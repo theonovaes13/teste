@@ -6,13 +6,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-
+    redirect_to edit_student_path(current_user.student) if current_user.student.iduff.nil?
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = current_user(find_params[:id])
   end
 
   # GET /users/new

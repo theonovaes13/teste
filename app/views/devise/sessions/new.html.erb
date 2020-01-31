@@ -1,6 +1,7 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<h2 id="titulo">Log in</h2>
+<img id="gatinho2" src="https://i.pinimg.com/originals/ce/c4/9e/cec49ef2741941ccb25a382cfa463189.png" alt="miau">
+<div id="form-mail">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -22,5 +23,6 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>

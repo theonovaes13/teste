@@ -16,9 +16,9 @@ class User < ApplicationRecord
   def cria_opcao
     nome = self.student.nome.split
     opcoes = []
-    opcoes.push(nome[0].downcase+nome[1].downcase+"@id.uff.br")
-    opcoes.push(nome[0].downcase+nome[1][0].downcase+ nome[1][1]+"@id.uff.br")
-    opcoes.push(nome[0][0].downcase + nome[0][1]+ nome[1]+"@id.uff.br")
+    opcoes.push(nome[0]+nome[1]+"@id.uff.br")
+    opcoes.push(nome[0]+nome[1][0]+ nome[1][1]+"@id.uff.br")
+    opcoes.push(nome[0][0] + nome[0][1]+ nome[1]+"@id.uff.br")
     opcoes.push(nome[0]+nome[1][0]+"@id.uff.br")
     opcoes.push(nome[0][0]+nome[1]+"@id.uff.br")
     opcoes
