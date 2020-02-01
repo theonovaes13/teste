@@ -10,7 +10,6 @@ class StudentsController < ApplicationController
   def update
     respond_to do |format|
       if @student.update(student_params)
-        debugger
         format.html { redirect_to @student, notice: 'Seu IDUFF foi devidamente gerado' }
         format.json { render :show, status: :ok, location: @student }
       else

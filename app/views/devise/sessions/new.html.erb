@@ -2,11 +2,12 @@
 <img id="gatinho2" src="https://i.pinimg.com/originals/ce/c4/9e/cec49ef2741941ccb25a382cfa463189.png" alt="miau">
 <div id="form-mail">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <br>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+    <br>
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
@@ -18,11 +19,13 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
+<br>
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+    <br>
 <% end %>
 </div>
 
-<%= link_to( "Registre-se", new_user_registration_path) %>
+<br><%= link_to( "Registre-se", new_user_registration_path) %><br><br>
+<%= link_to( "Página Inicial", welcome_index_path) %>

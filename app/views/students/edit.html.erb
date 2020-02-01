@@ -1,23 +1,29 @@
 <h1>Opções de Email:</h1>
 
-<div class = "Options">
+<div id = "form-mail" >
+  <div id="opcoes">
 <%= form_for(@student, local: true ) do |f| %>
+    <br><br>
   <%= f.label :iduff, @nomes[0] %>
   <%= f.radio_button(:iduff, @nomes[0], :checked => true) %>
-
+    <br><br>
   <%= f.label :iduff, @nomes[1] %>
   <%= f.radio_button(:iduff, @nomes[1])  %>
-
+    <br><br>
   <%= f.label :iduff, @nomes[2] %>
   <%= f.radio_button(:iduff, @nomes[2]) %>
-
+    <br><br>
   <%= f.label :iduff, @nomes[3] %>
   <%= f.radio_button(:iduff, @nomes[3]) %>
-
+    <br><br>
   <%= f.label :iduff, @nomes[4] %>
   <%= f.radio_button(:iduff, @nomes[4]) %>
+      <br><br>
 
- <br>
+      </div>
+ <br><br>
   <%= f.submit %>
 <% end %>
+
+  <br><br>
 </div>

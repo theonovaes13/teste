@@ -1,6 +1,15 @@
-<h1>Informações de <%= @student.nome.split[0] %>:</h1>
+<h2>Informações de <%= @student.nome.split[0] %>:</h2>
+<br>
 
-<%= @student.nome %>
-<%= @student.iduff %>
+<div id="form-mail">
+  <p>Nome completo:</p>
+<%= @student.nome %><br><br>
+  <p>Uffmail gerado:</p>
+<%= @student.iduff %><br><br>
+</div>
+<p id="warning1">Atenção: Um e-mail será enviado para <%=@student.email %> <br>confirmando a operação e um SMS será enviado ao número <%=@student.telefone %> em breve. </p>
+<br><br>
 
 <%= link_to("Logout", destroy_user_session_path, method: :delete) %>
+<br><br>
+<%= link_to( "Página Inicial", welcome_index_path) %>

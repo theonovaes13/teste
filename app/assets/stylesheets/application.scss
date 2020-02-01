@@ -66,26 +66,24 @@ body{
 
 #form-mail{
   width: 20%;
-
+  border-radius: 5px;
   margin: 10px auto;
   background-color: cornflowerblue;
   margin-bottom: 10px;
 }
+#opcoes{
+  border-radius:5px;
+  width: 90%;
+  height: auto;
+  background-color: ghostwhite;
+  position: relative;
+  left: 5%;
+  top:10px;
+}
 
-//#titulo{
-//  font-family: cursive;
-//  animation-duration: 3s;
-//  animation-name: shake;
-//  animation-iteration-count: infinite;
-//  //&:hover{
-//  //
-//  //  transform: scale(1.5) rotate(180deg);
-//  //}
-//  transition: all 0.75s;
-//  text-align: center;
-//  background-color: white;
-//  display: inline-block;
-//}
+#warning1{
+  background-color: red;
+}
 
 
 #inscricao{
@@ -101,10 +99,7 @@ body{
   top: 80px;
   left: -100px;
   z-index: -1;
-  //animation-duration: 3s;
-  //animation-name: walk;
-  //animation-iteration-count: infinite;
-  //animation-direction: alternate;
+  animation: walk 8s infinite;
 }
 
 #gatinho2{
@@ -116,7 +111,9 @@ body{
   animation-direction: alternate;
 }
 
-
+#warning{
+  color: #2E2F30;
+}
 
 
 
