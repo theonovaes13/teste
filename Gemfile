@@ -5,6 +5,9 @@ ruby '2.6.2'
 
 gem 'bootstrap', '~> 4.4.1'
 
+
+gem 'simplecov', require: false, group: :test
+
 gem 'jquery-rails'
 
 gem 'devise'
@@ -49,6 +52,10 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner-active_record'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
@@ -57,3 +64,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Run against the latest stable release
+group :development, :test do
+  # Note that rspec-rails 4.0 is still a beta release
+  gem 'rspec-rails', '~> 4.0.0.beta'
+end
+

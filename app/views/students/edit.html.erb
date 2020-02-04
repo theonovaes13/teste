@@ -2,7 +2,7 @@
 
 <div id = "form-mail" >
   <div id="opcoes">
-<%= form_for(@student, local: true ) do |f| %>
+<%= form_with(model: @student, local: true) do |f| %>
     <br><br>
   <%= f.label :iduff, @nomes[0] %>
   <%= f.radio_button(:iduff, @nomes[0], :checked => true) %>

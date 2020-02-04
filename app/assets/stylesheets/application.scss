@@ -10,8 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  */
- //@import "bootstrap";
+
+@import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Battambang&display=swap');
+
+@font-face {
+  font-family: 'Cyberpunk';
+  src: url('/fonts/Alien-Encounters-Regular.ttf');
+}
 
 * {
   margin: 0;
@@ -28,8 +34,10 @@ h2{
 }
 
 h1{
+  color: #ff2975;
+  font-family: Cyberpunk;
   display: inline-block;
-  background-color: white;
+  background-color: #ffd319;
   margin-top: 10%;
   padding-left: 5px;
   padding-right: 5px;
@@ -48,14 +56,16 @@ a{
 }
 
 body{
-  background-color: navy;
+  height: 100vh;
+  background-image: linear-gradient(#ff901f, #ff2975, #8c1eff);
   text-align: center;
 
 }
 
 .Log-button{
   position: relative;
-  top: 90%
+  display: inline-block;
+
 }
 
 .Links{
