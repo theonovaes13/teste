@@ -1,10 +1,8 @@
 require 'simplecov'
 require 'devise'
 
-if ENV['RAILS_ENV'] == 'test'
-  require 'simplecov'
-  SimpleCov.start 'rails'
-  puts "required simplecov"
+SimpleCov.start 'rails' do
+  add_filter '/config/'
 end
 
 include Warden::Test::Helpers
