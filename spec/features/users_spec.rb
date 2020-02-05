@@ -16,6 +16,8 @@ RSpec.feature "signin", :type => :feature do
 
 
   scenario "usuario escolhe uma opção", js: true do
+    estudante
+    usuario
     visit '/auth/sign_up'
     fill_in "Email", with: estudante.email
     fill_in "Password", with: '321321'
@@ -27,6 +29,7 @@ RSpec.feature "signin", :type => :feature do
     click_on "Update Student"
 
     expect(page).to have_text "Informações de"
+    sleep(5)
   end
 
 end

@@ -1,8 +1,18 @@
 require 'simplecov'
 require 'devise'
+require 'shoulda-matchers'
+
 
 SimpleCov.start 'rails' do
   add_filter '/config/'
+  add_filter '/app/channels/'
+  add_filter '/app/jobs/'
+  add_filter '/app/mailers/'
+  add_filter '/app/controllers/Users/confirmations_controller.rb'
+  add_filter '/app/controllers/Users/omniauth_callbacks_controller.rb'
+  add_filter 'app/controllers/Users/passwords_controller.rb'
+  add_filter '/app/controllers/Users/unlocks_controller.rb'
+
 end
 
 include Warden::Test::Helpers
@@ -29,6 +39,8 @@ RSpec.configure do |config|
   # assertions if you prefer.
   #
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include(Shoulda::Matchers::ActiveModel, type: :model)
+  config.include(Shoulda::Matchers::ActiveRecord, type: :model)
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
